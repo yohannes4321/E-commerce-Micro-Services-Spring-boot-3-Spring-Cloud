@@ -1,0 +1,14 @@
+# configurations/discovery-service.yml
+spring:
+  application:
+    name: discovery-service # Good practice to include this, but the filename is key
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # Fix: Use : not /

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Microservices.iml" filepath="$PROJECT_DIR$/Microservices.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/config-server/config-server/config-server.iml" filepath="$USER_HOME$/Downloads/config-server/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/Config_services/src/main/main.iml" filepath="$PROJECT_DIR$/services/Config_services/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/Config_services/src/test/test.iml" filepath="$PROJECT_DIR$/services/Config_services/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/Product/src/test/test2.iml" filepath="$PROJECT_DIR$/services/Product/src/test/test2.iml" />
+    </modules>
+  </component>
+</project>

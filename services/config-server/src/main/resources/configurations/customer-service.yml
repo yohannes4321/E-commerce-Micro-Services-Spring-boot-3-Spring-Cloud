@@ -1,0 +1,15 @@
+# configurations/customer-service.yml
+spring:
+  application:
+    name: customer-service
+  data:
+    mongodb:
+      username: mongo
+      password: 1245
+      host: localhost
+      port: 27017
+      database: customer
+      authentication-database: admin
+
+server:
+  port: 8090
