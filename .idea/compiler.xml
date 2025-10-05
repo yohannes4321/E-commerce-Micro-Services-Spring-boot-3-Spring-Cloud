@@ -10,13 +10,14 @@
         <module name="Discovery" />
         <module name="demo" />
       </profile>
-      <profile name="Annotation profile for demo" enabled="true">
+      <profile name="Annotation profile for Order" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
         </processorPath>
+        <module name="Order" />
         <module name="Product" />
         <module name="Customer" />
       </profile>
@@ -31,6 +32,7 @@
       <module name="Config_services" options="-parameters" />
       <module name="Customer" options="-parameters" />
       <module name="Discovery" options="-parameters" />
+      <module name="Order" options="-parameters" />
       <module name="Product" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="demo" options="-parameters" />

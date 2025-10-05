@@ -4270,61 +4270,128 @@ false Zulu
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <table id="272" parent="271" name="flyway_schema_history">
+    <sequence id="272" parent="271" name="category_seq">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33490</ObjectId>
+      <SequenceIdentity>1+50</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1108</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="273" parent="271" name="product_seq">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33491</ObjectId>
+      <SequenceIdentity>1+50</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1113</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="274" parent="271" name="category">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33471</ObjectId>
+      <StateNumber>1104</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="275" parent="271" name="flyway_schema_history">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>33402</ObjectId>
       <StateNumber>1099</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="273" parent="272" name="installed_rank">
+    <table id="276" parent="271" name="product">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>33478</ObjectId>
+      <StateNumber>1106</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="277" parent="274" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>1104</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="278" parent="274" name="description">
+      <Position>2</Position>
+      <StateNumber>1104</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="279" parent="274" name="name">
+      <Position>3</Position>
+      <StateNumber>1104</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="280" parent="274" name="category_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33476</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1104</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="281" parent="274" name="category_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33477</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1104</StateNumber>
+      <UnderlyingIndexId>33476</UnderlyingIndexId>
+    </key>
+    <column id="282" parent="275" name="installed_rank">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1099</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="274" parent="272" name="version">
+    <column id="283" parent="275" name="version">
       <Position>2</Position>
       <StateNumber>1099</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="275" parent="272" name="description">
+    <column id="284" parent="275" name="description">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1099</StateNumber>
       <StoredType>varchar(200)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="276" parent="272" name="type">
+    <column id="285" parent="275" name="type">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1099</StateNumber>
       <StoredType>varchar(20)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="277" parent="272" name="script">
+    <column id="286" parent="275" name="script">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1099</StateNumber>
       <StoredType>varchar(1000)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="278" parent="272" name="checksum">
+    <column id="287" parent="275" name="checksum">
       <Position>6</Position>
       <StateNumber>1099</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="279" parent="272" name="installed_by">
+    <column id="288" parent="275" name="installed_by">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>1099</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="280" parent="272" name="installed_on">
+    <column id="289" parent="275" name="installed_on">
       <DefaultExpression>now()</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
@@ -4332,21 +4399,21 @@ false Zulu
       <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="281" parent="272" name="execution_time">
+    <column id="290" parent="275" name="execution_time">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StateNumber>1099</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="282" parent="272" name="success">
+    <column id="291" parent="275" name="success">
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StateNumber>1099</StateNumber>
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
-    <index id="283" parent="272" name="flyway_schema_history_pk">
+    <index id="292" parent="275" name="flyway_schema_history_pk">
       <ColNames>installed_rank</ColNames>
       <ObjectId>33408</ObjectId>
       <Primary>1</Primary>
@@ -4354,17 +4421,78 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="284" parent="272" name="flyway_schema_history_s_idx">
+    <index id="293" parent="275" name="flyway_schema_history_s_idx">
       <ColNames>success</ColNames>
       <ObjectId>33410</ObjectId>
       <StateNumber>1099</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="285" parent="272" name="flyway_schema_history_pk">
+    <key id="294" parent="275" name="flyway_schema_history_pk">
       <ObjectId>33409</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1099</StateNumber>
       <UnderlyingIndexId>33408</UnderlyingIndexId>
+    </key>
+    <column id="295" parent="276" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>1106</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="296" parent="276" name="description">
+      <Position>2</Position>
+      <StateNumber>1106</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="297" parent="276" name="name">
+      <Position>3</Position>
+      <StateNumber>1106</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="298" parent="276" name="available_quantity">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>1106</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="299" parent="276" name="price">
+      <Position>5</Position>
+      <StateNumber>1106</StateNumber>
+      <StoredType>numeric(32,2 digit)|0s</StoredType>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="300" parent="276" name="category_id">
+      <Position>6</Position>
+      <StateNumber>1106</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="301" parent="276" name="yohannes">
+      <ColNames>category_id</ColNames>
+      <ObjectId>33485</ObjectId>
+      <StateNumber>1106</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>33471</RefTableId>
+    </foreign-key>
+    <index id="302" parent="276" name="product_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33483</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1106</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="303" parent="276" name="product_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33484</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1106</StateNumber>
+      <UnderlyingIndexId>33483</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
