@@ -3,10 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Microservices.iml" filepath="$PROJECT_DIR$/Microservices.iml" />
+<<<<<<< HEAD
       <module fileurl="file://$USER_HOME$/Downloads/config-server/config-server/config-server.iml" filepath="$USER_HOME$/Downloads/config-server/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/Config_services/src/main/main.iml" filepath="$PROJECT_DIR$/services/Config_services/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/Config_services/src/test/test.iml" filepath="$PROJECT_DIR$/services/Config_services/src/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/Product/src/test/test2.iml" filepath="$PROJECT_DIR$/services/Product/src/test/test2.iml" />
+=======
+>>>>>>> 3f0050f11ee02f112a6074fffefa6a83ab20f825
     </modules>
   </component>
 </project>
