@@ -7,6 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Discovery" />
+        <module name="demo" />
+      </profile>
+      <profile name="Annotation profile for Product" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
+        </processorPath>
+        <module name="Product" />
       </profile>
       <profile name="Annotation profile for Order" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -15,16 +27,13 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
         </processorPath>
+        <module name="Order" />
+        <module name="Customer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="config-server" target="25" />
       <module name="Config_services" target="21" />
-      <module name="Customer" target="25" />
-      <module name="demo" target="25" />
-      <module name="Discovery" target="25" />
-      <module name="Order" target="25" />
-      <module name="Product" target="25" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
