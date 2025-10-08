@@ -1,16 +1,16 @@
-﻿# Quiz-Question-Microservices
+# Microservices Architecture with Spring Boot, Spring Cloud & Keycloak
  
 ![Alt Text](diagram/1.png)
 ![Alt Text](diagram/3.png)
 ![Alt Text](diagram/4.png)
-# 🚀 Microservices Architecture with Spring Boot, Spring Cloud & Keycloak
+
 
 This project demonstrates a **complete microservices-based architecture** built using **Spring Boot**, **Spring Cloud**, **Apache Kafka**, **Docker**, and **Keycloak**.  
 It implements both **synchronous and asynchronous communication**, **distributed tracing**, **centralized configuration**, and **secure authentication** — all within a production-grade setup.
 
 ---
 
-## 🧩 Architecture Overview
+## Architecture Overview
 
 The system is composed of multiple microservices communicating over REST and Kafka:
 
@@ -25,21 +25,21 @@ The system is composed of multiple microservices communicating over REST and Kaf
 
 ---
 
-## ⚙️ Core Features Implemented
+##  Core Features Implemented
 
-### 🧠 Domain-Driven Design (DDD)
+###  Domain-Driven Design (DDD)
 - Applied **DDD principles** to separate the domain logic, infrastructure, and application layers.  
 - Each microservice contains its own **bounded context**, ensuring modularity and scalability.
 
-### 🔁 Communication Patterns
+###  Communication Patterns
 - **Synchronous communication** via **OpenFeign** and **RestTemplate** for inter-service REST calls.  
 - **Asynchronous communication** using **Apache Kafka** for order confirmations and notifications.  
 
-### 🔐 Security
+###  Security
 - Integrated **Keycloak** for identity and access management.  
 - Configured **OAuth2 & JWT-based authentication** for securing APIs via the API Gateway.  
 
-### 🐳 Containerization
+###  Containerization
 - All services are containerized using **Docker**.  
 - **Docker Compose** orchestrates the complete infrastructure:
   - Zookeeper & Kafka  
@@ -47,17 +47,17 @@ The system is composed of multiple microservices communicating over REST and Kaf
   - Zipkin for tracing  
   - Keycloak for security  
 
-### 🧭 Distributed Tracing & Monitoring
+###  Distributed Tracing & Monitoring
 - Integrated **Zipkin** for distributed tracing of requests across microservices.  
 - Exposed **Spring Actuator** metrics for system monitoring.
 
-### 🧾 Exception Handling & Validation
+###  Exception Handling & Validation
 - Global error handling using `@ControllerAdvice`.  
 - Custom exceptions for validation, business logic, and runtime issues.
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 | Category | Technologies |
 |-----------|--------------|
@@ -110,6 +110,7 @@ The system is composed of multiple microservices communicating over REST and Kaf
 ---
 
 ## 📸 System Diagram (Example)
+
 
 
 
